@@ -27,7 +27,7 @@ print(numbers)
 
 numbers.append(99) #add 99 to the end of the list
 numbers.pop(4) #remove the item at index 4, no index removes the last item
-numbers.insert(1, "yeah") #insert "yearh" at index 1
+numbers.insert(1, "yeah") #insert "yeah" at index 1
 numbers.extend([3,6,9]) #add multiple to the end of the list
 print(numbers)
 numbers.remove(99) #remove the first occurrence of value
@@ -54,3 +54,20 @@ print(new_numbers)
 new_numbers.sort(reverse=True) #sort the list and print it from the last value to the first
 print(new_numbers)
 
+groceries = ["apples", "cereal", "sprite", "bread", "coffee"]
+print(groceries[0],groceries[-1])
+print(groceries[:3])
+groceries.append("eggs")
+print(groceries)
+groceries.insert(0,"milk")
+print(groceries)
+groceries.remove("sprite")
+print(groceries)
+if "bread" in groceries:
+    print("Bread is in the list")
+elif "bread" not in groceries:
+    print("No bread")
+else:
+    print("...")
+groceries.sort()
+print(groceries)
