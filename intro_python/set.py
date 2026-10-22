@@ -44,3 +44,90 @@ print(set_one.difference(set_two))
 
 #symmetric difference
 print(set_one.symmetric_difference(set_two)) #return everything except what is shared (unique elements of both sets)
+
+group_a = {"leo", "sam", "alex", "nina"}
+group_b = {"nina", "jordan", "sam", "taylor"}
+
+print(group_a.intersection(group_b))
+print(group_b.symmetric_difference(group_a))
+
+signin = ["leo", "nina", "leo", "maya", "nina", "sam"]
+print(set(signin))
+
+group_list = list(group_a) + list(group_b)
+group_registered = group_a.union(group_b)
+unregistered = set(group_list).symmetric_difference(set(signin))
+
+#FOR LOOPS
+for letter in "Hello":
+    print(letter)
+
+#range prints the index number of a range, not the value
+for x in range(5):
+    print(x)
+
+for x in range(2, 6): #start at 2 and print to index 6
+    print(x)
+
+#step skips number
+for x in range(0, 10, 2):
+    print(x)    #start at 0, end at 10, count by 2's
+
+
+#else in for loops
+for x in range(3):
+    print(x)
+else: #in a for loop, else is the next step, not conditional execution
+    print("loop done")
+
+#else is most useful with break
+for number in [3,7,9]:
+    if number % 2 == 0:
+        print("Found an even number")
+        break #stops the loop
+else:
+    print("No even numbers found")
+
+#break and continue in for loops
+for x in range(10):
+    if x == 5:
+        continue
+    if x == 8:
+        break
+    print(x)
+
+num = input("Enter a number: ")
+for x in range(1,11):
+    i = int(num) * x
+    print(f"{i} x {x} = {i * x}")
+
+#While loops run as long as a condition is true. If it never becomes false, you can get an infinite loop
+
+count = 1
+while count <= 5:
+    print("Count is ",count)
+    count += 1 #add to count so that the condition can become false
+
+count = 0
+while count < 5:
+    count += 1
+    if count == 3:
+        continue #skips three and continues after it with no logic execution
+    print(count)
+else:
+    print("Loop finished")
+
+tasks = ["dishes", "garbage", "homework"]
+while tasks:
+    current = tasks.pop()
+    print("Doing", current)
+
+while True:
+    answer = input("Enter a number: ")
+    try:
+        number = int(answer)
+        break
+    except ValueError:
+        print("That's not a number")
+
+print(f"Thanks! You entered {number}")
